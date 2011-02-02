@@ -117,8 +117,9 @@ map <Leader>sv :RSview
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
 map <Leader>b :FufBuffer<CR>
-map <Leader>a :Ack
+map <Leader>a :Ack 
 map <Leader># :TComment<CR>
+map <Leader>gb :Gblame<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
