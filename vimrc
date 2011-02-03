@@ -221,8 +221,8 @@ endfunction
 map <Leader>w :call OpenURL()<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
 set hidden
 set guioptions-=m
 set guioptions-=T
 
+set statusline=%{fugitive#statusline()}
