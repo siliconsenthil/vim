@@ -119,7 +119,7 @@ map <Leader>sf :RSfunctionaltest
 map <Leader>b :FufBuffer<CR>
 map <Leader>a :Ack 
 map <Leader># :TComment<CR>
-map <Leader>gb :Gblame<CR>
+map <Leader>gb :Gblame C<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -225,4 +225,3 @@ set hidden
 set guioptions-=m
 set guioptions-=T
 
-set statusline=%{fugitive#statusline()}
