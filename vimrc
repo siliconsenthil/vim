@@ -225,3 +225,4 @@ set hidden
 set guioptions-=m
 set guioptions-=T
 
+set spell
