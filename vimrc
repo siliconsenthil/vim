@@ -120,6 +120,7 @@ map <Leader>b :FufBuffer<CR>
 map <Leader>a :Ack 
 map <Leader># :TComment<CR>
 map <Leader>gb :Gblame C<CR>
+map <Leader>p :Lodgeit<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
