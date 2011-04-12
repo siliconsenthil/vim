@@ -225,4 +225,4 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set hidden
 set guioptions-=m
 set guioptions-=T
-
+set list
