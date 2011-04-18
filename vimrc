@@ -225,4 +225,7 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set hidden
 set guioptions-=m
 set guioptions-=T
-set list
+
+autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
+autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
+highlight EOLWS ctermbg=red guibg=red
