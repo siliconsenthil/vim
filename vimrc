@@ -116,12 +116,27 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
-map <Leader>b :FufBuffer<CR>
+
 map <Leader>a :Ack 
 map <Leader># :TComment<CR>
-map <Leader>gb :Gblame C<CR>
 map <Leader>p :Lodgeit<CR>
 map <Leader>x :%s/\s\+$//<CR>
+
+" Leader shortcuts for Fugitive commands
+map <Leader>gb :Gblame C<CR>
+map <Leader>gd :Gdiff<CR>
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :GCommit<CR>
+map <Leader>gl :Glog<CR>
+
+" Leader shortcuts for Fuf commands
+map <Leader>fb :FufBuffer<CR>
+map <Leader>ff :FufCoverageFile<CR>
+map <Leader>ft :FufTag<CR>
+map <Leader>fc :FufChangeList<CR>
+map <Leader>fj :FufJumpList<CR>
+
+map <Leader>fm :FufBufferTag<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -229,7 +244,7 @@ set guioptions-=T
 
 autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
 autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
-highlight EOLWS ctermbg=red guibg=red
+highlight EOLWS ctermbg=blue guibg=blue
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set visualbell
 set shortmess=atI
