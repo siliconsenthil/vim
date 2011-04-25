@@ -16,6 +16,3 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/simplefold"]
-	path = bundle/simplefold
-	url = https://github.com/vim-scripts/simplefold.git
