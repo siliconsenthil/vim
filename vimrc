@@ -135,6 +135,7 @@ map <Leader>ff :FufCoverageFile<CR>
 map <Leader>ft :FufTag<CR>
 map <Leader>fc :FufChangeList<CR>
 map <Leader>fj :FufJumpList<CR>
+map <Leader>fx :!ctags -R *<CR>
 
 map <Leader>fm :FufBufferTag<CR>
 
