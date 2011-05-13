@@ -1,6 +1,20 @@
-filetype off 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+filetype off
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'endwise.vim'
+Bundle 'matchit.zip'
+Bundle 'textobj-user'
+Bundle 'textobj-rubyblock'
+Bundle 'railscasts'
 "
 "
 " based on
