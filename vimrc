@@ -2,6 +2,7 @@ filetype off
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/nerdtree'
@@ -10,10 +11,15 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'ShowMarks'
 Bundle 'endwise.vim'
 Bundle 'matchit.zip'
 Bundle 'textobj-user'
 Bundle 'textobj-rubyblock'
+Bundle 'SuperTab'
+Bundle 'unimpaired.vim'
+Bundle 'errormarker.vim'
+Bundle 'abolish.vim'
 Bundle 'railscasts'
 "
 "
