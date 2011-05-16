@@ -140,6 +140,7 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
+map <Leader>rt :Rake<CR>
 
 map <Leader>a :Ack 
 map <Leader>x :%s/\s\+$//<CR>
