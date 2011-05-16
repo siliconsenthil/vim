@@ -16,11 +16,16 @@ Bundle 'endwise.vim'
 Bundle 'matchit.zip'
 Bundle 'textobj-user'
 Bundle 'textobj-rubyblock'
+runtime macros/matchit.vim
 Bundle 'SuperTab'
 Bundle 'unimpaired.vim'
 Bundle 'errormarker.vim'
 Bundle 'abolish.vim'
+Bundle 'YankRing.vim'
+Bundle 'camelcasemotion'
+Bundle 'minibufexpl.vim'
 Bundle 'railscasts'
+
 "
 "
 " based on
@@ -138,8 +143,6 @@ map <Leader>su :RSunittest
 map <Leader>sf :RSfunctionaltest 
 
 map <Leader>a :Ack 
-map <Leader># :TComment<CR>
-map <Leader>p :Lodgeit<CR>
 map <Leader>x :%s/\s\+$//<CR>
 
 " Leader shortcuts for Fugitive commands
@@ -155,9 +158,12 @@ map <Leader>ff :FufCoverageFile<CR>
 map <Leader>ft :FufTag<CR>
 map <Leader>fc :FufChangeList<CR>
 map <Leader>fj :FufJumpList<CR>
+map <Leader>fm :FufBufferTag<CR>
 map <Leader>fx :!ctags -R *<CR>
 
-map <Leader>fm :FufBufferTag<CR>
+
+map <Leader>pl :YRShow<CR>
+map <Leader>ps :YRSearch<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -268,3 +274,5 @@ autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
 highlight EOLWS ctermbg=blue guibg=blue
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set shortmess=atI
+let g:miniBufExplMapCTabSwitchBufs = 1
+
