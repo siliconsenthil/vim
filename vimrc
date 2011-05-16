@@ -12,6 +12,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'ShowMarks'
+let g:showmarks_enable=0
 Bundle 'endwise.vim'
 Bundle 'matchit.zip'
 Bundle 'textobj-user'
@@ -161,7 +162,6 @@ map <Leader>fj :FufJumpList<CR>
 map <Leader>fm :FufBufferTag<CR>
 map <Leader>fx :!ctags -R *<CR>
 
-
 map <Leader>pl :YRShow<CR>
 map <Leader>ps :YRSearch<CR>
 
@@ -275,4 +275,3 @@ highlight EOLWS ctermbg=blue guibg=blue
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set shortmess=atI
 let g:miniBufExplMapCTabSwitchBufs = 1
-
