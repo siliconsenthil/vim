@@ -11,8 +11,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'ShowMarks'
-let g:showmarks_enable=0
 Bundle 'endwise.vim'
 Bundle 'matchit.zip'
 Bundle 'textobj-user'
