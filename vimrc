@@ -4,11 +4,13 @@ call vundle#rc()
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'SuperTab continued'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'endwise.vim'
@@ -16,7 +18,6 @@ Bundle 'matchit.zip'
 Bundle 'textobj-user'
 Bundle 'textobj-rubyblock'
 runtime macros/matchit.vim
-Bundle 'SuperTab'
 Bundle 'unimpaired.vim'
 Bundle 'errormarker.vim'
 Bundle 'abolish.vim'
@@ -274,3 +275,9 @@ highlight EOLWS ctermbg=blue guibg=blue
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set shortmess=atI
 let g:miniBufExplMapCTabSwitchBufs = 1
+
+:au FocusLost silent! :wa
+set ofu=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt+=longest,menuone
+:highlight Pmenu guibg=brown gui=bold
