@@ -5,6 +5,9 @@ call vundle#rc()
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
+:set lazyredraw
+highlight diffAdded guifg=#00bf00
+highlight diffRemoved guifg=#bf0000
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
@@ -21,10 +24,14 @@ runtime macros/matchit.vim
 Bundle 'unimpaired.vim'
 Bundle 'errormarker.vim'
 Bundle 'abolish.vim'
-Bundle 'YankRing.vim'
 Bundle 'camelcasemotion'
 Bundle 'minibufexpl.vim'
 Bundle 'railscasts'
+Bundle 'lukerandall/haskellmode-vim'
+Bundle 'indent/haskell.vim'
+
+:imap jj <Esc>
+
 
 "
 "
@@ -122,6 +129,10 @@ set laststatus=2
 " \ is the leader character
 let mapleader = ","
 
+nmap <leader>gL :Gitv<cr>
+nmap <leader>gl :Gitv!<cr>
+vmap <leader>gl :Gitv!<cr>
+
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
@@ -151,7 +162,6 @@ map <Leader>gb :Gblame C<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gc :GCommit<CR>
-map <Leader>gl :Glog<CR>
 
 " Leader shortcuts for Fuf commands
 map <Leader>fb :FufBuffer<CR>
@@ -164,9 +174,6 @@ map <Leader>fx :!ctags -R *<CR>
 
 map <Leader>pl :YRShow<CR>
 map <Leader>ps :YRSearch<CR>
-
-" Hide search highlighting
-map <Leader>h :set invhls <CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -276,8 +283,22 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set shortmess=atI
 let g:miniBufExplMapCTabSwitchBufs = 1
 
-:au FocusLost silent! :wa
 set ofu=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
 set completeopt+=longest,menuone
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabLongestEnhanced=1
 :highlight Pmenu guibg=brown gui=bold
+let g:yankring_min_element_length = 2
+let g:yankring_window_use_horiz = 0  " Use vertical split
+let g:yankring_window_width = 150
+
+au Bufenter *.hs compiler ghc
+
+let g:haddock_browser = "/usr/bin/google-chrome"
+let g:ghc = "/usr/bin/ghc"
+let g:haddock_browser_callformat = "%s %s"
+let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
+
+:filetype plugin on
+
