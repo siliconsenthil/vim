@@ -298,4 +298,6 @@ let g:haddock_browser_callformat = "%s %s"
 let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
 
 :filetype plugin on
+:nmap <c-tab> :bnext<cr>
+:nmap <c-s-tab> :bprevious<cr>
 
