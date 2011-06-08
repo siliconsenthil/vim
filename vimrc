@@ -289,9 +289,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
 let g:SuperTabLongestEnhanced=1
 :highlight Pmenu guibg=brown gui=bold
-let g:yankring_min_element_length = 2
-let g:yankring_window_use_horiz = 0  " Use vertical split
-let g:yankring_window_width = 150
 
 au Bufenter *.hs compiler ghc
 
