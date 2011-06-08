@@ -27,7 +27,8 @@ Bundle 'abolish.vim'
 Bundle 'camelcasemotion'
 Bundle 'railscasts'
 Bundle 'lukerandall/haskellmode-vim'
-Bundle 'indent/haskell.vim'
+Bundle 'mrueegg/vim_hlint_mode'
+autocmd FileType haskell compiler hlint
 
 :imap jj <Esc>
 
@@ -169,10 +170,10 @@ map <Leader>ft :FufTag<CR>
 map <Leader>fc :FufChangeList<CR>
 map <Leader>fj :FufJumpList<CR>
 map <Leader>fm :FufBufferTag<CR>
+map <Leader>fk :FufBookmarkFile<CR>
+map <Leader>fa :FufBookmarkFileAdd<CR>
+map <Leader>fq :FufQuickFix<CR>
 map <Leader>fx :!ctags -R *<CR>
-
-map <Leader>pl :YRShow<CR>
-map <Leader>ps :YRSearch<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -300,3 +301,10 @@ let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
 :nmap <c-tab> :bnext<cr>
 :nmap <c-s-tab> :bprevious<cr>
 
+
+
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+set autowriteall
+
+let g:fuf_patternSeparator = ';'
