@@ -27,6 +27,7 @@ Bundle 'abolish.vim'
 Bundle 'camelcasemotion'
 Bundle 'railscasts'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'mrueegg/vim_hlint_mode'
 autocmd FileType haskell compiler hlint
 
@@ -296,6 +297,7 @@ let g:haddock_browser = "/usr/bin/google-chrome"
 let g:ghc = "/usr/bin/ghc"
 let g:haddock_browser_callformat = "%s %s"
 let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
+let g:syntastic_enable_signs=1
 
 :filetype plugin on
 :nmap <c-tab> :bnext<cr>
