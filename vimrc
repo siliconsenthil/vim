@@ -187,6 +187,9 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Move lines up and down
 map <C-J> :m +1 <CR>
 map <C-K> :m -2 <CR>
+"Mapping Ctrl+s to save
+map <C-s>  :w <CR>
+imap <C-s> <Esc> :w <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -210,7 +213,15 @@ nmap <F1> <Esc>
 imap <C-F> <C-R>=expand("%")<CR>
 
 " Maps autocomplete to tab
-imap <Tab> <C-N>
+" imap <Tab> <C-N>
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 imap <C-L> <Space>=><Space>
 
