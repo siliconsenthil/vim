@@ -29,6 +29,7 @@ Bundle 'railscasts'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'mrueegg/vim_hlint_mode'
+Bundle 'vim-scripts/ZoomWin'
 autocmd FileType haskell compiler hlint
 
 :imap jj <Esc>
@@ -175,6 +176,13 @@ map <Leader>fk :FufBookmarkFile<CR>
 map <Leader>fa :FufBookmarkFileAdd<CR>
 map <Leader>fq :FufQuickFix<CR>
 map <Leader>fx :!ctags -R *<CR>
+map <Leader><Leader> :ZoomWin<CR>
+
+" Without setting this, ZoomWin restores windows in a way that causes
+" equalalways behavior to be triggered the next time CommandT is used.
+" This is likely a bludgeon to solve some other issue, but it works
+set noequalalways
+
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -221,7 +229,7 @@ function! Tab_Or_Complete()
     return "\<Tab>"
   endif
 endfunction
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+imap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 imap <C-L> <Space>=><Space>
 
