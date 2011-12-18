@@ -30,6 +30,8 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'mrueegg/vim_hlint_mode'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'rorymckinley/vim-symbols-strings'
+
 autocmd FileType haskell compiler hlint
 
 :imap jj <Esc>
