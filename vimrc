@@ -31,6 +31,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mrueegg/vim_hlint_mode'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'rorymckinley/vim-symbols-strings'
+Bundle 'pangloss/vim-javascript'
+Bundle 'JavaScript syntax'
 
 autocmd FileType haskell compiler hlint
 
