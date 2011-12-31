@@ -283,19 +283,6 @@ set tags=./tags;
 
 let g:fuf_splitPathMatching=1
 
-" Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
-endfunction
-map <Leader>w :call OpenURL()<CR>
-
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set hidden
 set guioptions-=m
