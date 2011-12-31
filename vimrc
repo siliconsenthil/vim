@@ -33,6 +33,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'rorymckinley/vim-symbols-strings'
 Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript syntax'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 autocmd FileType haskell compiler hlint
 
