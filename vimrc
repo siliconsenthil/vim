@@ -71,7 +71,6 @@ map Q gq
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
-  set hlsearch
 endif
 
 " Switch wrap off for everything
@@ -321,3 +320,5 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 set autowriteall
 
 let g:fuf_patternSeparator = ';'
+colorscheme railscasts
+set guifont=Inconsolata:h14
