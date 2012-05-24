@@ -282,7 +282,7 @@ set tags=./tags;
 
 let g:fuf_splitPathMatching=1
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack -H --nocolor --nogroup --column"
 set hidden
 set guioptions-=m
 set guioptions-=T
