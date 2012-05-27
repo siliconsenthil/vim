@@ -34,6 +34,7 @@ Bundle 'rorymckinley/vim-symbols-strings'
 Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript syntax'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'kien/ctrlp.vim'
 
 autocmd FileType haskell compiler hlint
 
