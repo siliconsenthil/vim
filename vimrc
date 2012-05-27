@@ -77,6 +77,19 @@ endif
 " Switch wrap off for everything
 set nowrap
 
+function! <SID>Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
   " Enable file type detection.
@@ -110,6 +123,8 @@ if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
 
   augroup END
+
+  autocmd BufWritePre *.rb,*.html.erb :call <SID>Preserve("%s/\\s\\+$//e")
 
 else
 
@@ -162,7 +177,7 @@ map <Leader>sf :RSfunctionaltest
 map <Leader>rt :Rake<CR>
 
 map <Leader>a :Ack 
-map <Leader>x :%s/\s\+$//<CR>
+map <Leader>x :call <SID>Preserve("%s/\\s\\+$//e")<CR>
 
 " Leader shortcuts for Fugitive commands
 map <Leader>gb :Gblame C<CR>
