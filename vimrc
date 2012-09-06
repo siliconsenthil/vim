@@ -35,6 +35,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'JavaScript syntax'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 autocmd FileType haskell compiler hlint
 
@@ -324,6 +325,7 @@ let g:ghc = "/usr/bin/ghc"
 let g:haddock_browser_callformat = "%s %s"
 let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
 let g:syntastic_enable_signs=1
+let g:Powerline_symbols = 'fancy'
 
 :filetype plugin on
 :nmap <c-tab> :bnext<cr>
@@ -337,4 +339,4 @@ set autowriteall
 
 let g:fuf_patternSeparator = ';'
 colorscheme railscasts
-set guifont=Inconsolata:h14
+set guifont=Inconsolata-dz\ for\ Powerline:h12
