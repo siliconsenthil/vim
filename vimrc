@@ -13,7 +13,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'SuperTab continued'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'endwise.vim'
@@ -32,10 +31,12 @@ Bundle 'mrueegg/vim_hlint_mode'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'rorymckinley/vim-symbols-strings'
 Bundle 'pangloss/vim-javascript'
-Bundle 'JavaScript syntax'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'skalnik/vim-vroom'
+Bundle 'cakebaker/scss-syntax.vim'
 
 autocmd FileType haskell compiler hlint
 
@@ -339,4 +340,4 @@ set autowriteall
 
 let g:fuf_patternSeparator = ';'
 colorscheme railscasts
-set guifont=Inconsolata-dz\ for\ Powerline:h12
+set guifont=Inconsolata\ for\ Powerline:h13
