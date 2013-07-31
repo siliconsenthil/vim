@@ -37,6 +37,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'skalnik/vim-vroom'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'tpope/vim-haml'
 
 autocmd FileType haskell compiler hlint
 
