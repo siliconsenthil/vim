@@ -127,7 +127,8 @@ if has("autocmd")
 
   augroup END
 
-  autocmd BufWritePre *.rb,*.html.erb :call <SID>Preserve("%s/\\s\\+$//e")
+  " Remove trailing whitespace on save
+  autocmd BufWritePre *.rb,*.html.erb,*.html.haml :call <SID>Preserve("%s/\\s\\+$//e")
 
 else
 
