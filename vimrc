@@ -38,6 +38,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'skalnik/vim-vroom'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-haml'
+Bundle 'siliconsenthil/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'zerowidth/vim-copy-as-rtf'
 
 autocmd FileType haskell compiler hlint
 
@@ -201,6 +204,13 @@ map <Leader>fa :FufBookmarkFileAdd<CR>
 map <Leader>fq :FufQuickFix<CR>
 map <Leader>fx :!ctags -R *<CR>
 map <Leader><Leader> :ZoomWin<CR>
+
+" vim-rspec mappings
+map <Leader>sf :call RunCurrentSpecFile()<CR>
+map <Leader>ss :call RunNearestSpec()<CR>
+map <Leader>sl :call RunLastSpec()<CR>
+map <Leader>sa :call RunAllSpecs()<CR>
+" let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
