@@ -233,6 +233,10 @@ map <C-K> :m -2 <CR>
 map <C-s>  :w <CR>
 imap <C-s> <Esc> :w <CR>
 
+" Open NERDTree
+map <C-o> :NERDTree <CR>
+imap <C-o> :NERDTree <CR>
+
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
