@@ -245,6 +245,10 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 " Visual mode: D
 vmap D y'>p
 
+" Select and tab to indent
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
 " Press Shift+P while in visual mode to replace the selection without
 " overwriting the default register
 vmap P p :call setreg('"', getreg('0')) <CR>
