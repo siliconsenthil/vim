@@ -131,7 +131,7 @@ if has("autocmd")
   augroup END
 
   " Remove trailing whitespace on save
-  autocmd BufWritePre *.rb,*.html.erb,*.html.haml :call <SID>Preserve("%s/\\s\\+$//e")
+  autocmd BufWritePre *.rb,*.html.erb,*.html.haml,*.js :call <SID>Preserve("%s/\\s\\+$//e")
 
 else
 
@@ -232,10 +232,6 @@ map <C-K> :m -2 <CR>
 "Mapping Ctrl+s to save
 map <C-s>  :w <CR>
 imap <C-s> <Esc> :w <CR>
-
-" Open NERDTree
-map <C-o> :NERDTree <CR>
-imap <C-o> :NERDTree <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
