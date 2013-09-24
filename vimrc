@@ -41,11 +41,13 @@ Bundle 'tpope/vim-haml'
 Bundle 'siliconsenthil/vim-rspec'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'zerowidth/vim-copy-as-rtf'
+Bundle 'Yggdroot/indentLine'
 
 autocmd FileType haskell compiler hlint
 
 :imap jj <Esc>
 
+let g:indentLine_fileType=['haml']
 
 "
 "
