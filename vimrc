@@ -241,7 +241,7 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Duplicate a selection
 " Visual mode: D
-vmap D y'>p
+vmap D y'>o<Esc>p
 
 " Select and tab to indent
 vmap <Tab> >gv
