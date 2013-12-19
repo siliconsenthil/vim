@@ -344,6 +344,7 @@ let g:ghc = "/usr/bin/ghc"
 let g:haddock_browser_callformat = "%s %s"
 let g:haddock_docdir = "/usr/share/doc/ghc6-doc/html/"
 let g:syntastic_enable_signs=1
+let g:syntastic_javascript_checkers = ['jshint']
 let g:Powerline_symbols = 'fancy'
 
 :filetype plugin on
@@ -358,4 +359,4 @@ set autowriteall
 
 let g:fuf_patternSeparator = ';'
 colorscheme railscasts
-set guifont=Inconsolata\ for\ Powerline:h13
+set guifont=Inconsolata\ for\ Powerline:h15
