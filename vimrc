@@ -235,13 +235,17 @@ map <C-K> :m -2 <CR>
 map <C-s>  :w <CR>
 imap <C-s> <Esc> :w <CR>
 
+" copies line without newline. So, yank line n paste will not insert as a new
+" line
+map ly ^y$
+
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Duplicate a selection
 " Visual mode: D
-vmap D y'>p
+vmap D y'>o<Esc>p
 
 " Select and tab to indent
 vmap <Tab> >gv
